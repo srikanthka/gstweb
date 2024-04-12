@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+
+<!--
+ // WEBSITE: https://themefisher.com
+ // TWITTER: https://twitter.com/themefisher
+ // FACEBOOK: https://www.facebook.com/themefisher
+ // GITHUB: https://github.com/themefisher/
+-->
+
+<html lang="zxx">
+
+<head>
+  <meta charset="utf-8">
+  <title>GST</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <!-- ** Plugins Needed for the Project ** -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+  <!-- themefy-icon -->
+  <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
+  <!-- slick slider -->
+  <link rel="stylesheet" href="plugins/slick/slick.css">
+  <!-- venobox popup -->
+  <link rel="stylesheet" href="plugins/Venobox/venobox.css">
+  <!-- aos -->
+  <link rel="stylesheet" href="plugins/aos/aos.css">
+
+  <!-- Main Stylesheet -->
+  <link href="css/style.css" rel="stylesheet">
+  
+  <!--Favicon-->
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+       #mainTimer {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        #breathInTimer, #breathOutTimer {
+            font-size: 18px;
+        }
+		
+    .face {
+        width: 200px;
+        height: 200px;
+        background-color: #f8d392;
+        border-radius: 50%;
+        position: relative;
+    }
+
+    .nose {
+        width: 20px;
+        height: 20px;
+        background-color: #fff;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .breath-in, .breath-out {
+        animation-duration: 3s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+    }
+
+    .breath-in {
+        animation-name: breathIn;
+    }
+
+    .breath-out {
+        animation-name: breathOut;
+    }
+
+    @keyframes breathIn {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.2);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    @keyframes breathOut {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(0.8);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+</style>
+</head>
+
+<body>
+  
+
+<!-- navigation -->
+<section class="fixed-top navigation">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- navbar -->
+      <div class="collapse navbar-collapse text-center" id="navbar">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+		  <li class="nav-item">
+            <a class= "nav-link page-scroll" href="training.html">Good Sleep Training</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link page-scroll" href="index.html#feature">Sleep Dignostic process</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link page-scroll" href="index.html#sleepstudy">Sleep Terms</a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link page-scroll" href="stopbang.html">STOP-BANG</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</section>
+<!-- /navigation -->
+
+<!-- about us -->
+<section class="section-lg about pb-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-title">Breath Training for Good Sleep</h2>
+      </div>
+	  <div class="col-lg-12 text-center rounded bg-white p-4 shadow-primary text-center survey-container">
+		<!--<h4>Total Time</h4> -->
+		
+		<div id="mainTimer" style="display: none;">Total training time: <span id="mainTimerValue">5:00</span></div>
+		
+		<div id="breathInTimer" style="display: none;">Breath In: <span id="breathInTimerValue">3</span></div>
+		<div id="breathOutTimer" style="display: none;">Breath Out: <span id="breathOutTimerValue">3</span></div>
+
+		<img id="trainingImg" class="img-fluid" src="images/nicesleep.jpeg" alt="sleep-nice">
+		
+		<audio id="myAudio">
+		  <source src="sound.mp3" type="audio/mpeg">
+		  Your browser does not support the audio element.
+		</audio>
+		
+		<button id="startButton" class="btn btn-primary ml-lg-3 primary-shadow" onclick="startTimer()">Start</button>
+		
+		 <div id="controls" style="display: none;">
+			<button id="stopButton" class="btn btn-primary ml-lg-3 primary-shadow" onclick="stopTimer()">Stop</button>
+			 <!--<button id="pauseResumeButton" class="btn btn-primary ml-lg-3 primary-shadow" onclick="togglePauseResume()">Pause</button> -->
+			
+		</div>
+	
+	  </div>
+  </div>
+  </div>
+  <!-- background shapes -->
+  <img src="images/background-shape/green-dot.png" alt="background-shape" class="about-bg-1 up-down-animation">
+  <img src="images/background-shape/blue-dot.png" alt="background-shape" class="about-bg-2 left-right-animation">
+  <img src="images/background-shape/green-half-cycle.png" alt="background-shape" class="about-bg-3 up-down-animation">
+  <img src="images/background-shape/seo-ball-1.png" alt="background-shape" class="about-bg-4 left-right-animation">
+  <img src="images/background-shape/team-bg-triangle.png" alt="background-shape" class="about-bg-5 up-down-animation">
+  <img src="images/background-shape/service-half-cycle.png" alt="background-shape" class="about-bg-6 left-right-animation">
+</section>
+<!-- /about us -->
+
+<!-- footer -->
+<footer class="footer-section footer" style="background-image: url(images/backgrounds/footer-bg.png);">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 text-center text-lg-left mb-4 mb-lg-0">
+        <!-- logo -->
+        <a href="index.html">
+          <img class="img-fluid" src="images/logo.png" alt="logo">
+        </a>
+      </div>
+      <!-- footer menu -->
+     <nav class="col-lg-8 align-self-center mb-5">
+        <ul class="list-inline text-lg-right text-center footer-menu">
+          <li class="list-inline-item active"><a href="index.html">Home</a></li>
+          <li class="list-inline-item"><a class="page-scroll" href="index.html#feature">Sleep Dignostic process</a></li>
+          <li class="list-inline-item"><a class="page-scroll" href="index.html#sleepstudy">Sleep Terms</a></li>
+          <li class="list-inline-item"><a href="stopbang.html">STOP-BANG</a></li>
+		  <li class="list-inline-item"><a href="about.html">About</a></li>
+          <li class="list-inline-item"><a href="contact.html">Contact</a></li>
+		  <li class="list-inline-item"><a href="terms.html">Terms and Conditions</a></li>
+		  <li class="list-inline-item"><a href="privacypolicy.html">Privacy Policy</a></li>
+        </ul>
+      </nav>
+      <!-- footer social icon -->
+      <nav class="col-12">
+        <ul class="list-inline text-lg-right text-center social-icon">
+          <li class="list-inline-item">
+            <a class="facebook" href="#"><i class="ti-facebook"></i></a>
+          </li>
+          <li class="list-inline-item">
+            <a class="twitter" href="#"><i class="ti-twitter-alt"></i></a>
+          </li>
+          <li class="list-inline-item">
+            <a class="linkedin" href="#"><i class="ti-linkedin"></i></a>
+          </li>
+          <li class="list-inline-item">
+            <a class="black" href="#"><i class="ti-github"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</footer>
+<!-- /footer -->
+
+<!-- jQuery -->
+<script src="plugins/jQuery/jquery.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="plugins/bootstrap/bootstrap.min.js"></script>
+<!-- slick slider -->
+<script src="plugins/slick/slick.min.js"></script>
+<!-- venobox -->
+<script src="plugins/Venobox/venobox.min.js"></script>
+<!-- aos -->
+<script src="plugins/aos/aos.js"></script>
+<!-- Main Script -->
+<script src="js/script.js"></script>
+<script>
+
+		let paused = false;
+        // Function to format seconds into minutes and seconds (MM:SS)
+        function formatTime(seconds) {
+            let minutes = Math.floor(seconds / 60);
+            let remainingSeconds = seconds % 60;
+            return `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
+        }
+		
+		 // Main timer countdown
+		let mainTimerInterval;
+        let breathInTimerInterval;
+        let breathOutTimerInterval;
+        
+		let imageUrls = ["images/older.jpeg", "images/male2.jpeg", "images/male.jpeg","images/fat.jpeg"]; // Add more image URLs as needed
+
+
+        function startTimer() {
+            document.getElementById("startButton").style.display = "none";
+            document.getElementById("controls").style.display = "block";
+            document.getElementById("mainTimer").style.display = "block";
+            document.getElementById("breathInTimer").style.display = "block";
+            document.getElementById("breathOutTimer").style.display = "none";
+			let mainTimerValue = 5 * 60; // 5 minutes in seconds
+			 mainTimerInterval = setInterval(updateMainTimer, 1000);
+			 
+            function updateMainTimer() {
+				if (mainTimerValue >= 5 * 60) {
+					toggleBreathInTimer();
+					//breathIn();
+				 }
+                mainTimerValue--;
+                document.getElementById("mainTimerValue").textContent = formatTime(mainTimerValue);
+				
+				 
+				
+                if (mainTimerValue <= 0) {
+                    clearInterval(mainTimerInterval);
+                    document.getElementById("mainTimerValue").textContent = "0:00";
+                } else if (mainTimerValue % 6 === 0) { // Check if 6 seconds have passed (3 sec breath in + 3 sec breath out)
+                    //toggleBreathInTimer(); // Start breath-in timer
+                }
+            }
+
+            // Breath in timer countdown (3 seconds)
+            let breathInTimerValue = 3;
+           
+
+            function toggleBreathInTimer() {
+                // Show breath-in timer
+                document.getElementById("breathOutTimer").style.display = "none";
+                document.getElementById("breathInTimer").style.display = "block";
+                
+                // Start breath-in timer
+                breathInTimerValue = 3;
+                breathInTimerInterval = setInterval(updateBreathInTimer, 1000);
+            }
+
+            function updateBreathInTimer() {
+				document.getElementById("breathInTimerValue").textContent = breathInTimerValue //formatTime(breathInTimerValue);
+                document.getElementById("trainingImg").src = imageUrls[breathInTimerValue];
+                
+                if (breathInTimerValue <= 0) {
+                    clearInterval(breathInTimerInterval)
+                    toggleBreathOutTimer(); // Switch to breath-out timer
+					 var audio = document.getElementById("myAudio");
+					 audio.play();
+                }
+				breathInTimerValue--;
+            }
+
+            // Breath out timer countdown (3 seconds)
+            let breathOutTimerValue = 3;
+           
+
+            function toggleBreathOutTimer() {
+                // Show breath-out timer
+                document.getElementById("breathInTimer").style.display = "none";
+                document.getElementById("breathOutTimer").style.display = "block";
+
+                // Start breath-out timer
+                breathOutTimerValue = 3;
+                breathOutTimerInterval = setInterval(updateBreathOutTimer, 1000);
+            }
+
+            function updateBreathOutTimer() {
+				document.getElementById("breathOutTimerValue").textContent =  breathOutTimerValue //formatTime(breathOutTimerValue);
+                document.getElementById("trainingImg").src = imageUrls[breathOutTimerValue];
+                
+                if (breathOutTimerValue <= 0) {
+                    clearInterval(breathOutTimerInterval);
+                    toggleBreathInTimer(); // Switch to breath-in timer
+					//breathIn();
+					 var audio = document.getElementById("myAudio");
+					 audio.play();
+                }
+				 breathOutTimerValue--;
+            }
+        }
+
+        function stopTimer() {
+            clearInterval(mainTimerInterval);
+            clearInterval(breathInTimerInterval);
+            clearInterval(breathOutTimerInterval);
+        }
+		
+		function togglePauseResume() {
+            if (!paused) {
+                paused = true;
+                document.getElementById("pauseResumeButton").textContent = "Resume";
+                stopTimer();
+            } else {
+                paused = false;
+                document.getElementById("pauseResumeButton").textContent = "Pause";
+                startTimer();
+            }
+        }
+
+        function pauseTimer() {
+            clearInterval(mainTimerInterval);
+            clearInterval(breathInTimerInterval);
+            clearInterval(breathOutTimerInterval);
+        }
+
+        function resumeTimer() {
+            startTimer();
+        }
+    </script>
+</body>
+</html>

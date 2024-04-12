@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+
+<!--
+ // WEBSITE: https://themefisher.com
+ // TWITTER: https://twitter.com/themefisher
+ // FACEBOOK: https://www.facebook.com/themefisher
+ // GITHUB: https://github.com/themefisher/
+-->
+
+<html lang="zxx">
+
+<head>
+  <meta charset="utf-8">
+  <title>GST</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <!-- ** Plugins Needed for the Project ** -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+  <!-- themefy-icon -->
+  <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
+  <!-- slick slider -->
+  <link rel="stylesheet" href="plugins/slick/slick.css">
+  <!-- venobox popup -->
+  <link rel="stylesheet" href="plugins/Venobox/venobox.css">
+  <!-- aos -->
+  <link rel="stylesheet" href="plugins/aos/aos.css">
+
+  <!-- Main Stylesheet -->
+  <link href="css/style.css" rel="stylesheet">
+  
+  <!--Favicon-->
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+<style>
+.survey-container {
+    
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    
+  }
+  .question {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .answer {
+    margin-bottom: 10px;
+  }
+  .buttons {
+    margin-top: 20px;
+    text-align: right;
+  }
+  .buttons button {
+    margin-left: 10px;
+  }
+  #resultsPage {
+    display: none;
+  }
+  .red-element {
+	color: red;
+	text-align: center;
+  }
+  .yellow-element {
+	color: yellow;
+	text-align: center;
+  }
+  .green-element {
+	color: green;
+	text-align: center;
+  }
+  .span{
+	text-align: center;
+	margin: auto;
+  }
+</style>
+</head>
+
+<body>
+  
+
+<!-- navigation -->
+<section class="fixed-top navigation">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- navbar -->
+      <div class="collapse navbar-collapse text-center" id="navbar">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link page-scroll" href="training.html">Good Sleep Training</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link page-scroll" href="index.html#feature">Sleep Dignostic process</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link page-scroll" href="index.html#sleepstudy">Sleep Terms</a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link page-scroll" href="stopbang.html">STOP-BANG</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+		  
+        </ul>
+       
+      </div>
+    </nav>
+  </div>
+</section>
+<!-- /navigation -->
+
+<!-- about us -->
+<section class="section-lg about pb-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-title">AHI (Apnea-Hypopnea Index)</h2>
+      </div>
+	  <div class=" rounded bg-white p-4 shadow-primary text-center survey-container" id="surveyPage">
+		<p class="mb-100">The Apnea-Hypopnea Index is a parameter derived from sleep study data, specifically polysomnography or home sleep apnea testing. It quantifies the severity of sleep apnea by measuring the average number of apneas and hypopneas per hour of sleep. It is a key metric used in diagnosing and categorizing the severity of sleep-disordered breathing.</p>
+		<h4><span  id="questionNumberDisplay"></span></h4>
+		<img class="img-fluid" src="images/ahi.jpeg" alt="sleep-ahi">
+		<p><span  id="riskLevel"> The Apnea-Hypopnea Index (AHI) is a measure used in sleep studies to quantify the severity of sleep-disordered breathing, particularly in conditions such as obstructive sleep apnea (OSA).
+
+In sleep studies, data such as airflow, respiratory effort, oxygen saturation, and sleep stages are recorded over the course of a night's sleep. These data are often displayed graphically in polysomnography (PSG) reports or other sleep study reports. The AHI is derived from the number of apneas (complete cessation of airflow) and hypopneas (partial reduction in airflow) observed during these recordings, typically expressed as the average number of events per hour of sleep.
+
+Graphs or charts in sleep study reports may show trends in airflow, oxygen levels, and other parameters over time, which can indirectly reflect the severity of sleep-disordered breathing and the AHI. Additionally, treatment efficacy and changes in AHI may be visualized before and after interventions such as continuous positive airway pressure (CPAP) therapy.
+
+While the AHI itself may not be directly represented by a picture, visualizations of sleep study data can provide valuable insights into sleep-disordered breathing patterns and treatment outcomes. </span></p>
+  
+		</div>
+  </div>
+  </div>
+  <!-- background shapes -->
+  <img src="images/background-shape/green-dot.png" alt="background-shape" class="about-bg-1 up-down-animation">
+  <img src="images/background-shape/blue-dot.png" alt="background-shape" class="about-bg-2 left-right-animation">
+  <img src="images/background-shape/green-half-cycle.png" alt="background-shape" class="about-bg-3 up-down-animation">
+  <img src="images/background-shape/seo-ball-1.png" alt="background-shape" class="about-bg-4 left-right-animation">
+  <img src="images/background-shape/team-bg-triangle.png" alt="background-shape" class="about-bg-5 up-down-animation">
+  <img src="images/background-shape/service-half-cycle.png" alt="background-shape" class="about-bg-6 left-right-animation">
+</section>
+<!-- /about us -->
+
+<!-- footer -->
+<footer class="footer-section footer" style="background-image: url(images/backgrounds/footer-bg.png);">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 text-center text-lg-left mb-4 mb-lg-0">
+        <!-- logo -->
+        <a href="index.html">
+          <img class="img-fluid" src="images/logo.png" alt="logo">
+        </a>
+      </div>
+      <!-- footer menu -->
+      <nav class="col-lg-8 align-self-center mb-5">
+        <ul class="list-inline text-lg-right text-center footer-menu">
+          <li class="list-inline-item active"><a href="index.html">Home</a></li>
+          <li class="list-inline-item"><a class="page-scroll" href="index.html#feature">Sleep Dignostic process</a></li>
+          <li class="list-inline-item"><a class="page-scroll" href="index.html#sleepstudy">Sleep Terms</a></li>
+          <li class="list-inline-item"><a href="stopbang.html">STOP-BANG</a></li>
+          <li class="list-inline-item"><a href="contact.html">Contact</a></li>
+		  <li class="list-inline-item"><a href="terms.html">Terms and Conditions</a></li>
+		  <li class="list-inline-item"><a href="privacypolicy.html">Privacy Policy</a></li>
+        </ul>
+      </nav>
+	  	  
+	  
+      <!-- footer social icon -->
+      <nav class="col-12">
+        <ul class="list-inline text-lg-right text-center social-icon">
+          <li class="list-inline-item">
+            <a class="facebook" href="#"><i class="ti-facebook"></i></a>
+          </li>
+          <li class="list-inline-item">
+            <a class="twitter" href="#"><i class="ti-twitter-alt"></i></a>
+          </li>
+          <li class="list-inline-item">
+            <a class="linkedin" href="#"><i class="ti-linkedin"></i></a>
+          </li>
+          <li class="list-inline-item">
+            <a class="black" href="#"><i class="ti-github"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</footer>
+<!-- /footer -->
+
+<!-- jQuery -->
+<script src="plugins/jQuery/jquery.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="plugins/bootstrap/bootstrap.min.js"></script>
+<!-- slick slider -->
+<script src="plugins/slick/slick.min.js"></script>
+<!-- venobox -->
+<script src="plugins/Venobox/venobox.min.js"></script>
+<!-- aos -->
+<script src="plugins/aos/aos.js"></script>
+<!-- Main Script -->
+<script src="js/script.js"></script>
+<script>
+  var questions = [
+    {
+      question: "Do you snore loudly (louder than talking or loud enough to be heard through closed doors)?",
+      options: [
+        { value: "Yes", score: 1 },
+        { value: " No", score: 0 }
+      ],
+	  image: "images/snoring.JPEG",
+      answer: null
+    },
+    {
+      question: "Do you often feel tired, fatigued, or sleepy during daytime?",
+      options: [
+         { value: "Yes", score: 1 },
+        { value: " No", score: 0 }
+      ],
+	  image: "images/tiredness.JPEG",
+      answer: null
+    },
+    {
+      question: "Has anyone observed you stop breathing or choking/gasping during your sleep?",
+      options: [
+         { value: "Yes", score: 1 },
+        { value: " No", score: 0 }
+      ], 
+	  image: "images/choking.JPEG",
+      answer: null
+    },
+    {
+      question: "Do you have or are you being treated for high blood pressure?",
+      options: [
+         { value: "Yes", score: 1 },
+        { value: " No", score: 0 }
+      ],
+	  image: "images/bp.JPEG",
+      answer: null
+    },
+    {
+      question: "Is your Body Mass Index (BMI) more than 35 kg/m²?",
+      options: [
+         { value: "Yes", score: 1 },
+        { value: " No", score: 0 }
+      ],
+	   image: "images/fat.JPEG",
+      answer: null
+    },
+    {
+      question: "Are you older than 50 years old?",
+      options: [
+         { value: "Yes", score: 1 },
+        { value: " No", score: 0 }
+      ],
+	   image: "images/older.JPEG",
+      answer: null
+    },
+	{
+      question: "Is your neck circumference greater than 40 cm?",
+      options: [
+         { value: "Yes", score: 1 },
+        { value: " No", score: 0 }
+      ],
+	  image: "images/neck.JPEG",
+      answer: null
+    },
+	{
+      question: "Are you male?",
+      options: [
+         { value: "Yes", score: 1 },
+        { value: " No", score: 0 }
+      ],
+	   image: "images/male.JPEG",
+      answer: null
+    }
+  ];
+
+  var currentQuestion = 0;
+  var totalQuestions = questions.length;
+  var selectedAnswers = new Array(totalQuestions).fill(null);
+
+  function showQuestion(questionNumber) {
+    var questionContainer = document.getElementById('questionContainer');
+    questionContainer.innerHTML = '';
+    var currentQuestionObj = questions[questionNumber];
+    var questionDiv = document.createElement('div');
+    questionDiv.classList.add('question');
+
+	// Create a paragraph element for the question text
+	var questionText = document.createElement('h4');
+	// Set the text content of the paragraph element
+	questionText.textContent = currentQuestionObj.question;
+	// Append the paragraph element to the questionDiv
+	questionDiv.appendChild(questionText);	
+	
+// Create an image element
+	var imageElement = document.createElement('img');
+	// Set the source attribute to the URL of the image
+	imageElement.src = currentQuestionObj.image; // Assuming currentQuestionObj.image contains the URL of the image
+	imageElement.width = 200; // Set width to 200 pixels
+	imageElement.height = 150; // Set height to 150 pixels
+	imageElement.style.display = 'block';
+	imageElement.style.margin = 'auto';
+	// Append the image element to the questionDiv
+	questionDiv.appendChild(imageElement);
+	
+    //questionDiv.textContent = currentQuestionObj.question;
+    questionContainer.appendChild(questionDiv);
+
+    currentQuestionObj.options.forEach(function(option, index) {
+      var answerDiv = document.createElement('div');
+      answerDiv.classList.add('answer');
+      var input = document.createElement('input');
+      input.type = 'radio';
+      input.name = 'question' + questionNumber;
+      input.id = 'option' + index;
+      input.value = option.value;
+      input.checked = option.value === selectedAnswers[questionNumber];
+      var label = document.createElement('label');
+      label.setAttribute('for', 'option' + index);
+      label.textContent = option.value;
+      answerDiv.appendChild(input);
+      answerDiv.appendChild(label);
+      questionContainer.appendChild(answerDiv);
+    });
+
+    if (questionNumber === 0) {
+      document.getElementById('prevBtn').style.display = 'none';
+    } else {
+      document.getElementById('prevBtn').style.display = 'inline-block';
+    }
+
+    if (questionNumber === totalQuestions - 1) {
+      document.getElementById('nextBtn').style.display = 'none';
+      document.getElementById('submitBtn').style.display = 'inline-block';
+    } else {
+      document.getElementById('nextBtn').style.display = 'inline-block';
+      document.getElementById('submitBtn').style.display = 'none';
+    }
+	
+	 document.getElementById('questionNumberDisplay').textContent = (questionNumber + 1) + "/" + totalQuestions;
+	 
+	 document.getElementById('questionNumberDisplay').style.display = 'block';
+	 document.getElementById('questionNumberDisplay').style.margin = 'auto';
+  }
+
+  function prevQuestion() {
+    if (currentQuestion > 0) {
+      currentQuestion--;
+      showQuestion(currentQuestion);
+    }
+  }
+
+  function nextQuestion() {
+    if (currentQuestion < totalQuestions - 1) {
+      var selectedOption = document.querySelector('input[name="question' + currentQuestion + '"]:checked');
+      if (selectedOption) {
+        selectedAnswers[currentQuestion] = selectedOption.value;
+      }
+      currentQuestion++;
+      showQuestion(currentQuestion);
+    }
+  }
+
+  function restartSurvey() {
+    currentQuestion = 0;
+    selectedAnswers.fill(null);
+    document.getElementById('surveyPage').style.display = 'block';
+    document.getElementById('resultsPage').style.display = 'none';
+    showQuestion(currentQuestion);
+  }
+  
+   function interpretRiskLevel(totalScore) {
+    var riskLevelTitleElement = document.getElementById('riskLeveltitle');
+	var riskLevelElement = document.getElementById('riskLevel');
+	
+    if (totalScore >= 5) {
+	  riskLevelTitleElement.textContent = "High Risk"
+      riskLevelElement.textContent = "Individuals with scores in this range are considered to be at high risk for OSA. This suggests a significant likelihood of having OSA, and further assessment and management are typically recommended, including a sleep study and appropriate treatment interventions.";
+	  riskLevelElement.style.color = "red";
+	  riskLevelTitleElement.style.color = "red";
+	} else if (totalScore >= 3) {
+	  riskLevelTitleElement.textContent = "Intermediate Risk"
+      riskLevelElement.textContent = "Individuals with scores in this range are at an intermediate risk for OSA. This indicates a moderate likelihood of having OSA, and further evaluation may be recommended, such as a sleep study or consultation with a healthcare professional.";
+	  riskLevelElement.style.color = "orange";
+	  riskLevelTitleElement.style.color = "yellow";
+	} else {
+	  riskLevelTitleElement.textContent = "Low Risk"
+      riskLevelElement.textContent = "Individuals with scores in this range are considered to be at low risk for OSA. However, it's essential to note that a low score doesn't completely rule out the possibility of OSA, especially if symptoms are still present.";
+	  riskLevelElement.style.color = "green";
+	  riskLevelTitleElement.style.color = "green";
+	}
+  }
+
+  document.getElementById('surveyForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    var selectedOption = document.querySelector('input[name="question' + currentQuestion + '"]:checked');
+    if (selectedOption) {
+      selectedAnswers[currentQuestion] = selectedOption.value;
+    }
+    var totalScore = selectedAnswers.reduce(function(acc, answer, index) {
+      return acc + questions[index].options.find(opt => opt.value === answer).score;
+    }, 0);
+    document.getElementById('surveyPage').style.display = 'none';
+    document.getElementById('resultsPage').style.display = 'block';
+    document.getElementById('totalScore').textContent = totalScore;
+	interpretRiskLevel(totalScore);
+    console.log('Selected answers:', selectedAnswers);
+    console.log('Total Score:', totalScore);
+    // You can perform further actions here, like submitting the form data via AJAX or storing it in a database
+  });
+
+  showQuestion(currentQuestion);
+  
+</script>
+
+</body>
+</html>
